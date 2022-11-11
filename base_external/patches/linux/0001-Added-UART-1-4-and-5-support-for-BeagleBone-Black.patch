@@ -12,7 +12,7 @@ diff --git a/arch/arm/boot/dts/am335x-bone-common.dtsi b/arch/arm/boot/dts/am335
 index e13aed0963..51a6be7ed5 100644
 --- a/arch/arm/boot/dts/am335x-bone-common.dtsi
 +++ b/arch/arm/boot/dts/am335x-bone-common.dtsi
-@@ -99,6 +99,27 @@
+@@ -93,6 +93,27 @@
  		>;
  	};
  
@@ -37,14 +37,15 @@ index e13aed0963..51a6be7ed5 100644
 +        >;
 +    };
 +
- 	clkout2_pin: pinmux_clkout2_pin {
- 		pinctrl-single,pins = <
- 			AM33XX_IOPAD(0x9b4, PIN_OUTPUT_PULLDOWN | MUX_MODE3)	/* xdma_event_intr1.clkout2 */
-@@ -195,6 +216,27 @@
+ 	cpsw_default: cpsw_default {
+		pinctrl-single,pins = <
+ 			/* Slave 1 */
+@@ -191,7 +191,31 @@
  	status = "okay";
  };
  
 +&uart1 {
++	 compatible = "serial";
 +    pinctrl-names = "default";
 +    pinctrl-0 = <&uart1_pins>;
 +
@@ -52,6 +53,7 @@ index e13aed0963..51a6be7ed5 100644
 +};
 +
 +&uart4 {
++	 compatible = "serial";
 +    pinctrl-names = "default";
 +    pinctrl-0 = <&uart4_pins>;
 +
@@ -59,14 +61,17 @@ index e13aed0963..51a6be7ed5 100644
 +};
 +
 +&uart5 {
++	 compatible = "serial";
 +    pinctrl-names = "default";
 +    pinctrl-0 = <&uart5_pins>;
 +
 +    status = "okay";
 +};
 +
- &usb {
- 	status = "okay";
+ &usb0 {
+	dr_mode = "peripheral";
+	interrupts-extended = <&intc 18 &tps 0>;
+	interrupt-names = "mc", "vbus";
  };
 -- 
 2.17.1
