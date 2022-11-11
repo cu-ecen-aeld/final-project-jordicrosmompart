@@ -5,7 +5,6 @@ MODIFIED_DEFCONFIG=${MODIFIED_BEAGLEBONE_DEFCONFIG}
 MODIFIED_DEFCONFIG_REL_BUILDROOT=../${MODIFIED_DEFCONFIG}
 
 cd `dirname $0`
-source shared.sh
 mkdir -p base_external/configs/
 make -C buildroot savedefconfig BR2_DEFCONFIG=${MODIFIED_DEFCONFIG_REL_BUILDROOT}
 
