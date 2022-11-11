@@ -32,7 +32,7 @@ then
 	device_aesdchar="aesdchar"
 
 	# Install module
-	insmod /lib/modules/5.15.18/extra/$module_aesdchar.ko || exit 1
+	insmod /lib/modules/5.10.30/extra/$module_aesdchar.ko || exit 1
 
 	# Retrieve major number
 	major=$(awk "\$2==\"$module_aesdchar\" {print \$1}" /proc/devices)
