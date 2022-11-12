@@ -40,7 +40,7 @@ index e13aed0963..51a6be7ed5 100644
  	cpsw_default: cpsw_default {
 		pinctrl-single,pins = <
  			/* Slave 1 */
-@@ -197,5 +197,29 @@
+@@ -197,5 +197,30 @@
  		interrupt-names = "mc", "vbus";
  };
  
@@ -50,6 +50,7 @@ index e13aed0963..51a6be7ed5 100644
 +    pinctrl-0 = <&uart1_pins>;
 +
 +    status = "okay";
++    symlink = "bone/uart/1";
 +};
 +
 +&uart4 {
