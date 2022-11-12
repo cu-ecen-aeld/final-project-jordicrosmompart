@@ -40,7 +40,7 @@ index e13aed0963..51a6be7ed5 100644
  	cpsw_default: cpsw_default {
 		pinctrl-single,pins = <
  			/* Slave 1 */
-@@ -191,7 +191,31 @@
+@@ -191,7 +199,31 @@
  	status = "okay";
  };
  
