@@ -40,8 +40,8 @@ index e13aed0963..51a6be7ed5 100644
  	cpsw_default: cpsw_default {
 		pinctrl-single,pins = <
  			/* Slave 1 */
-@@ -197,5 +197,30 @@
- 		interrupt-names = "mc", "vbus";
+@@ -191,7 +191,31 @@
+ 	status = "okay";
  };
  
 +&uart1 {
@@ -50,7 +50,6 @@ index e13aed0963..51a6be7ed5 100644
 +    pinctrl-0 = <&uart1_pins>;
 +
 +    status = "okay";
-+    symlink = "bone/uart/1";
 +};
 +
 +&uart4 {
@@ -69,8 +68,11 @@ index e13aed0963..51a6be7ed5 100644
 +    status = "okay";
 +};
 +
- &usb1 {
-	dr_mode = "host";
+ &usb0 {
+	dr_mode = "peripheral";
+	interrupts-extended = <&intc 18 &tps 0>;
+	interrupt-names = "mc", "vbus";
  };
 -- 
 2.17.1
+
