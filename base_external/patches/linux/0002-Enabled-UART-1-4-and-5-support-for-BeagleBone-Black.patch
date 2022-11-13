@@ -1,0 +1,31 @@
+diff --git a/arch/arm/boot/dts/am33xx-l4.dtsi b/arch/arm/boot/dts/am33xx-l4.dtsi
+index b88d0caa4b2d..e172a9dd44d6 100644
+--- a/arch/arm/boot/dts/am33xx-l4.dtsi
++++ b/arch/arm/boot/dts/am33xx-l4.dtsi
+@@ -963,7 +963,7 @@ uart1: serial@0 {
+ 				clock-frequency = <48000000>;
+ 				reg = <0x0 0x1000>;
+ 				interrupts = <73>;
+-				status = "disabled";
++				status = "okay";
+ 				dmas = <&edma 28 0>, <&edma 29 0>;
+ 				dma-names = "tx", "rx";
+ 			};
+@@ -1655,7 +1655,7 @@ uart4: serial@0 {
+ 				clock-frequency = <48000000>;
+ 				reg = <0x0 0x1000>;
+ 				interrupts = <45>;
+-				status = "disabled";
++				status = "okay";
+ 			};
+ 		};
+ 
+@@ -1684,7 +1684,7 @@ uart5: serial@0 {
+ 				clock-frequency = <48000000>;
+ 				reg = <0x0 0x1000>;
+ 				interrupts = <46>;
+-				status = "disabled";
++				status = "okay";
+ 			};
+ 		};
+ 

@@ -2,6 +2,7 @@ BR2_arm=y
 BR2_cortex_a8=y
 BR2_ARM_FPU_VFPV3=y
 BR2_GLOBAL_PATCH_DIR="../base_external/patches"
+BR2_KERNEL_HEADERS_5_16=y
 BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_MDEV=y
 BR2_TARGET_GENERIC_ROOT_PASSWD="root"
 BR2_ROOTFS_OVERLAY="../base_external/rootfs_overlay"
