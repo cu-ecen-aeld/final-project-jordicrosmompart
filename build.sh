@@ -10,9 +10,6 @@ MODIFIED_DEFCONFIG=${MODIFIED_BEAGLEBONE_DEFCONFIG}
 MODIFIED_DEFCONFIG_REL_BUILDROOT=../${MODIFIED_DEFCONFIG}
 
 EXTERNAL_REL_BUILDROOT=../base_external
-git submodule init
-git submodule sync
-git submodule update
 
 set -e 
 cd `dirname $0`
