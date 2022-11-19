@@ -1,3 +1,4 @@
+# AESD network interface configuration for beaglebone
 auto lo
 iface lo inet loopback
 
