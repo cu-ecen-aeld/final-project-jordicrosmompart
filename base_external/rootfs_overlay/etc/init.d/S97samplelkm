@@ -28,7 +28,7 @@ then
 	# AESDCHAR
 	#
 
-	module_uart_driver="uart_driver"
+	module_uart_driver="misc"
 	device_uart_driver="uart_driver"
 
 	# Install module
