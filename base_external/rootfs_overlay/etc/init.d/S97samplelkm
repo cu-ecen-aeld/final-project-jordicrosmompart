@@ -2,7 +2,7 @@
 
 usage() {
 	echo "Command: $0 <start/stop>"
-	echo "Functionality: installs/removes the aesdchar module."
+	echo "Functionality: installs/removes the UART module."
 }
 
 #Check that one arguments has been provided
@@ -14,7 +14,7 @@ fi
 
 if [ $1 = "start" ]
 then
-    echo "Installing Aesdchar module"
+    echo "Installing uart_driver module"
 
 	mode="644"
 	# Look for wheel or use staff
@@ -28,33 +28,33 @@ then
 	# AESDCHAR
 	#
 
-	module_aesdchar="aesdchar"
-	device_aesdchar="aesdchar"
+	module_uart_driver="uart_driver"
+	device_uart_driver="uart_driver"
 
 	# Install module
-	insmod /lib/modules/4.14.40/extra/$module_aesdchar.ko || exit 1
+	insmod /lib/modules/4.14.40/extra/$module_uart_driver.ko || exit 1
 
 	# Retrieve major number
-	major=$(awk "\$2==\"$module_aesdchar\" {print \$1}" /proc/devices)
+	major=$(awk "\$2==\"$module_uart_driver\" {print \$1}" /proc/devices)
 	if [ ! -z ${major} ]; then
 		# Remove nodes and place them again with ownership and access privileges
-		rm -f /dev/${device_aesdchar}
-		mknod /dev/${device_aesdchar} c $major 0
-		chgrp $group /dev/${device_aesdchar}
-		chmod $mode  /dev/${device_aesdchar}
+		rm -f /dev/${device_uart_driver}
+		mknod /dev/${device_uart_driver} c $major 0
+		chgrp $group /dev/${device_uart_driver}
+		chmod $mode  /dev/${device_uart_driver}
 	else
-		echo "No device found in /proc/devices for driver ${device_aesdchar} (this driver may not allocate a device)"
+		echo "No device found in /proc/devices for driver ${device_uart_driver} (this driver may not allocate a device)"
 	fi
     
 elif [ $1 = "stop" ]
 then
-    echo "Removing aesdchar module"
+    echo "Removing uart_driver module"
 
 	# Invoke rmmod with all arguments we got
-	module_aesdchar="aesdchar"
-	device_aesdchar="aesdchar"
-	rmmod $module_aesdchar || exit 1
+	module_uart_driver="uart_driver"
+	device_uart_driver="uart_driver"
+	rmmod $device_uart_driver || exit 1
 	# Remove stale nodes
-	rm -f /dev/${device_aesdchar}
+	rm -f /dev/${device_uart_driver}
     
 fi
