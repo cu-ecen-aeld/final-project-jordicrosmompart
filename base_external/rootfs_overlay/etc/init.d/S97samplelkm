@@ -32,7 +32,7 @@ then
 	device_uart_driver="uart_driver"
 
 	# Install module
-	insmod /lib/modules/4.14.40/extra/$module_uart_driver.ko || exit 1
+	insmod /lib/modules/4.14.40/extra/$device_uart_driver.ko || exit 1
 
 	# Retrieve major number
 	major=$(awk "\$2==\"$module_uart_driver\" {print \$1}" /proc/devices)
