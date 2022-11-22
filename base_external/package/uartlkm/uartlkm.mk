@@ -6,7 +6,7 @@
 ##############################################################
 $(eval $(kernel-module))
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-UARTLKM_VERSION = 'a86d7f7196874a1c4b464b6de6ffcb68f1f383c8'
+UARTLKM_VERSION = '9346363a89b662ddac6e980b63725167e835ca79'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:

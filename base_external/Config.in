@@ -1,2 +1,3 @@
 source "$BR2_EXTERNAL_project_base_PATH/package/samplelkm/Config.in"
 source "$BR2_EXTERNAL_project_base_PATH/package/uartlkm/Config.in"
+source "$BR2_EXTERNAL_project_base_PATH/package/hm11lkm/Config.in"
