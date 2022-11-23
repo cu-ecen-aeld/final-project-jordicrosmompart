@@ -6,7 +6,7 @@
 ##############################################################
 $(eval $(kernel-module))
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-HM11LKM_VERSION = '2a5f28095f0631ea59e1d45ec370ad3de97a95ae'
+HM11LKM_VERSION = 'ff8c8ede9fcb5e3fa9c523e80f8602184ba62bc8'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
