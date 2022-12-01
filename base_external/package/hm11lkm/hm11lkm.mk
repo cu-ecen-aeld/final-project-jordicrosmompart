@@ -7,7 +7,7 @@
 $(eval $(kernel-module))
 HM11LKM_DEPENDENCIES += uartlkm
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-HM11LKM_VERSION = '4ee561cf508f86ceef4d6aa3c6b754805f9f38a7'
+HM11LKM_VERSION = 'a7ac65baba7d034c62e48d76df8cb3f63901ad65'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
