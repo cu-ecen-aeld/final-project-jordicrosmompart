@@ -1,0 +1,5 @@
+config BR2_PACKAGE_UARTLKM
+	bool "UARTLKM"
+	depends on BR2_LINUX_KERNEL
+	help
+	  Includes the UART LKM

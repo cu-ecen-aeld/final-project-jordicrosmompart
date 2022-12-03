@@ -1,5 +1,0 @@
-config BR2_PACKAGE_HM11LKM
-	bool "HM11LKM"
-	depends on BR2_LINUX_KERNEL
-	help
-	  Includes the hm-11 LKM

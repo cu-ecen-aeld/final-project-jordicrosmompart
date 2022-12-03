@@ -1,5 +1,0 @@
-
-config BR2_PACKAGE_HEARTRATE_MEASUREMENT_SERVER
-	bool "heartrate-measurement-server"
-	help
-	  Includes the user code that interacts with the  HM-11 driver

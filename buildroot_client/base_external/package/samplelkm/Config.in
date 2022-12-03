@@ -1,0 +1,5 @@
+config BR2_PACKAGE_SAMPLELKM
+	bool "SAMPLELKM"
+	depends on BR2_LINUX_KERNEL
+	help
+	  Includes the char device LKM
