@@ -33,27 +33,11 @@ then
 
 	# Install module
 	insmod /lib/modules/4.14.40/extra/uart_driver.ko || exit 1
-
-	# Install HM-11 driver
-	module_hm11=hm11
-	device_hm11=hm11
-	insmod /lib/modules/4.14.40/extra/hm11.ko || exit 1
-	# Created nodes to directly access the HM-11 driver through fileops
-	major=$(awk "\$2==\"$module_hm11\" {print \$1}" /proc/devices)
-	rm -f /dev/${device_hm11}
-	mknod /dev/${device_hm11} c $major 0
-	chgrp $group /dev/${device_hm11}
-	chmod $mode  /dev/${device_hm11}
     
 elif [ $1 = "stop" ]
 then
     echo "Removing uart_driver module"
 	device_uart_driver="uart_driver"
 	rmmod $device_uart_driver || exit 1
-	echo "Removing HM-11 driver"
-	module_hm11=hm11
-	device_hm11=hm11
-	rmmod $module_hm11 || exit 1
-	rm -f /dev/${device_hm11}
     
 fi
