@@ -1,0 +1,6 @@
+[submodule "buildroot_server/buildroot"]
+	path = buildroot_server/buildroot
+	url = git@github.com:buildroot/buildroot.git
+[submodule "buildroot_client/buildroot"]
+	path = buildroot_client/buildroot
+	url = git@github.com:buildroot/buildroot.git
