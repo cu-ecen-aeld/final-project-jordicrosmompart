@@ -6,7 +6,7 @@
 ##############################################################
 
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-HEARTRATE_MEASUREMENT_SERVER_VERSION = '6cd00a23f23d0fe35a4c30a04175014c6f2bc820'
+HEARTRATE_MEASUREMENT_SERVER_VERSION = '0de19594a85e4ab37aaa7c5a711969a74d1bccd5'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
