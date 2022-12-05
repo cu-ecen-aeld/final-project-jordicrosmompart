@@ -1,0 +1,5 @@
+
+config BR2_PACKAGE_HM11EXTRAS
+	bool "hm11extras"
+	help
+	  Includes user code that tests extra HM11 features
