@@ -6,7 +6,7 @@
 ##############################################################
 
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-HM11EXTRAS_VERSION = '09bd83a69e8dcd31dda69d76c5cef79dc51bbe78'
+HM11EXTRAS_VERSION = '5b6709ff69e23e6f973da377200a530bc5636f3b'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
